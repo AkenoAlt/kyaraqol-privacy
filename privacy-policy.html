@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KyaraQoL Lite — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; font: 16px/1.65 system-ui, sans-serif; }
+    body { max-width: 800px; margin: 48px auto; padding: 0 24px 48px; }
+    h1 { font-size: 30px; line-height: 1.25; }
+    h2 { font-size: 21px; margin-top: 30px; }
+    code { font-size: .9em; overflow-wrap: anywhere; }
+    a { color: light-dark(#0059a6, #8bdff3); }
+    .date { opacity: .75; }
+  </style>
+</head>
+<body>
+  <h1>KyaraQoL Lite — Privacy Policy</h1>
+  <p class="date">Last updated: 13 October 2026. Applies to KyaraQoL Lite version 1.0.0.</p>
+  <p>KyaraQoL Lite displays character series, rarities and median card values on Kyara, and colors market listing borders using Kyara's displayed price comparison. It is an independent community extension, not affiliated with Kyara.</p>
+
+  <h2>Information processed</h2>
+  <p>The extension runs only on <code>https://kyara.games/*</code>. It checks the current Kyara page URL to determine which interface is open and reads character identifiers from card links and image addresses in supported offers and trade dialogs. It processes card names, series, rarities, public median prices and the market percentage labels needed to display its features. This page content is processed in your browser.</p>
+  <p>It does not read passwords, authentication tokens, cookies, private chat messages, account contact details or payment information. It does not track browsing on other websites, export your collection, or record trades and booster openings.</p>
+
+  <h2>Requests to Kyara</h2>
+  <p>For visible cards, the extension requests public JSON data over HTTPS from Kyara's character endpoint, <code>https://kyara.games/api/characters/{characterId}</code>. If that response omits prices, it requests <code>https://kyara.games/api/market/prices/{characterId}</code>.</p>
+  <p>The requested public character identifier appears in the request URL. The requests omit browser credentials: the extension does not attach login cookies or an authorization token. As with ordinary web requests, Kyara receives your IP address and standard browser request information, which may include a referrer according to your browser's policy. Kyara operates these endpoints independently and may process server logs according to its own policies; the extension developer does not control those logs.</p>
+  <p>The extension makes no requests to a developer-operated server, analytics service or advertising service. Collection cards and market border colors use information already displayed by Kyara without additional price requests from those features.</p>
+
+  <h2>Use and sharing</h2>
+  <p>Information is used only to display card metadata, median values and market value borders. Public character identifiers are sent to Kyara only to obtain the corresponding metadata and prices. The extension does not sell data, use it for advertising, create profiles of users, or transmit it to the extension developer or other recipients.</p>
+  <p>KyaraQoL Lite's use of information adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. Information accessed by the extension is used solely to provide its disclosed features.</p>
+
+  <h2>Storage and retention</h2>
+  <p>Retrieved card data is held temporarily in the current page's memory to avoid duplicate requests. Public price responses are reused through an in-memory cache, normally for five minutes; displayed labels may remain for as long as the page stays open. Reloading or closing that page clears the extension's page-memory data.</p>
+  <p>The extension does not use persistent extension storage, local storage, synchronized storage, tracking cookies or a developer database. It has no favorites, lock records, booster history or saved collection statistics.</p>
+
+  <h2>Your controls</h2>
+  <p>You can disable or uninstall KyaraQoL Lite through your browser's extension settings. Reload any already-open Kyara pages afterward to remove the running content script and its labels. No user database maintained by the extension developer needs to be deleted.</p>
+
+  <h2>Executable code</h2>
+  <p>All executable extension code is included in the installed extension package. Remote responses are processed as JSON data and are not executed as JavaScript or WebAssembly.</p>
+
+  <h2>Contact and updates</h2>
+  <p>For questions about this policy, contact the developer through the support contact provided on the KyaraQoL Lite Chrome Web Store listing. If the extension's data handling changes, this policy will be updated to describe those changes.</p>
+</body>
+</html>
